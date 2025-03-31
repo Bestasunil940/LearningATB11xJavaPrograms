@@ -37,17 +37,14 @@ public class FindNumbers {
             }
         }
 
-        // Finding second smallest
+        // Finding second smallest and second largest
         int secondSmallest = firstLargest; // Set it to max possible value in the array
-        for (int i = 0; i < n; i++) {
+        int secondLargest = firstSmallest; // Set it to min possible value in the array
+
+        for(int i = 0; i < n; i++) {
             if (arr[i] > firstSmallest && arr[i] < secondSmallest) {
                 secondSmallest = arr[i];
             }
-        }
-
-        // Finding second largest
-        int secondLargest = firstSmallest; // Set it to min possible value in the array
-        for (int i = 0; i < n; i++) {
             if (arr[i] < firstLargest && arr[i] > secondLargest) {
                 secondLargest = arr[i];
             }
